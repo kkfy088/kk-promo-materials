@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B 同质化市场营销 · 代运营提案</title>
+<style>
+  :root{
+    --green-deep:#0a5c3f;
+    --green:#0e7c55;
+    --green-mid:#16a06f;
+    --green-bright:#2ec98c;
+    --green-light:#7fe3bd;
+    --green-pale:#e6f7ef;
+    --green-paler:#f2fbf6;
+    --ink:#10312a;
+    --ink-soft:#3d5c52;
+    --amber:#d9a02b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#f2fbf6 0%,#e9f7f0 50%,#f6fdf9 100%);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ============ 封面 ============ */
+  .cover{
+    min-height:100vh;
+    background:linear-gradient(135deg,#06442f 0%,#0a5c3f 30%,#0e7c55 60%,#16a06f 85%,#2ec98c 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:80px 8vw;
+    position:relative;
+    overflow:hidden;
+  }
+  .cover::before{
+    content:"";
+    position:absolute;width:900px;height:900px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 65%);
+    top:-300px;right:-250px;
+  }
+  .cover::after{
+    content:"";
+    position:absolute;width:700px;height:700px;border-radius:50%;
+    background:radial-gradient(circle,rgba(127,227,189,.15) 0%,transparent 65%);
+    bottom:-250px;left:-200px;
+  }
+  .cover .kicker{
+    font-size:20px;letter-spacing:.45em;text-indent:.45em;color:var(--green-light);
+    text-transform:uppercase;margin-bottom:36px;font-weight:500;
+  }
+  .cover h1{
+    font-size:clamp(44px,6.2vw,84px);font-weight:800;line-height:1.25;
+    margin-bottom:28px;position:relative;z-index:1;
+    text-shadow:0 4px 30px rgba(0,0,0,.2);
+  }
+  .cover h1 em{
+    font-style:normal;
+    background:linear-gradient(90deg,#a9f0d0,#7fe3bd,#d8ffe9);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .cover .sub{
+    font-size:clamp(18px,2vw,26px);color:#c8f0dd;font-weight:400;max-width:820px;line-height:1.9;
+    position:relative;z-index:1;
+  }
+  .cover .meta{
+    margin-top:70px;font-size:15px;letter-spacing:.35em;text-indent:.35em;color:rgba(255,255,255,.55);
+    border-top:1px solid rgba(255,255,255,.25);padding-top:26px;position:relative;z-index:1;
+  }
+  .cover .formula-badge{
+    margin-top:46px;display:inline-block;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);
+    border-radius:60px;padding:16px 42px;font-size:clamp(17px,1.7vw,22px);
+    font-weight:600;letter-spacing:.06em;backdrop-filter:blur(6px);position:relative;z-index:1;
+  }
+  .cover .formula-badge b{color:var(--green-light);}
+
+  /* ============ 页面主体 ============ */
+  .wrap{max-width:1160px;margin:0 auto;padding:0 5vw;}
+
+  section.slide{
+    background:#ffffff;
+    border-radius:22px;
+    margin:56px auto;
+    padding:64px 72px;
+    box-shadow:0 10px 40px rgba(10,92,63,.10),0 2px 8px rgba(10,92,63,.06);
+    border:1px solid #e3f3ea;
+    position:relative;
+    overflow:hidden;
+  }
+  section.slide::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:8px;
+    background:linear-gradient(90deg,var(--green-deep),var(--green-mid),var(--green-bright),var(--green-light));
+  }
+
+  .sec-no{
+    display:inline-flex;align-items:center;gap:14px;margin-bottom:20px;
+  }
+  .sec-no .num{
+    background:linear-gradient(135deg,var(--green-deep),var(--green-mid));
+    color:#fff;font-weight:800;font-size:19px;
+    width:52px;height:52px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 14px rgba(14,124,85,.35);
+  }
+  .sec-no .tag{
+    font-size:15px;letter-spacing:.22em;color:var(--green);font-weight:600;text-transform:uppercase;
+  }
+
+  h2.slide-title{
+    font-size:clamp(30px,3.4vw,42px);font-weight:800;color:var(--green-deep);
+    line-height:1.35;margin-bottom:14px;
+  }
+  h3.slide-lead{
+    font-size:clamp(19px,1.9vw,24px);font-weight:600;color:var(--ink-soft);
+    margin-bottom:34px;line-height:1.7;
+  }
+  h3.slide-lead b, h2.slide-title b{color:var(--green);}
+
+  p.body-p{font-size:18.5px;color:#2a443b;margin:18px 0;line-height:1.95;}
+  p.body-p b{color:var(--green-deep);}
+
+  /* 引用块 */
+  blockquote{
+    background:linear-gradient(120deg,var(--green-pale),#f6fdf9);
+    border-left:6px solid var(--green-mid);
+    border-radius:0 16px 16px 0;
+    padding:24px 32px;margin:24px 0;font-size:19px;color:var(--ink);
+  }
+  blockquote b{color:var(--green-deep);font-size:20px;}
+  blockquote .who{display:block;margin-top:8px;font-size:15.5px;color:var(--ink-soft);}
+
+  /* 表格 */
+  table{
+    width:100%;border-collapse:separate;border-spacing:0;
+    margin:26px 0;font-size:17.5px;border-radius:16px;overflow:hidden;
+    box-shadow:0 4px 18px rgba(10,92,63,.08);
+  }
+  thead th{
+    background:linear-gradient(135deg,var(--green-deep),var(--green));
+    color:#fff;font-weight:700;padding:16px 18px;text-align:left;font-size:17.5px;
+    letter-spacing:.03em;white-space:nowrap;
+  }
+  tbody td{
+    padding:15px 18px;background:#fff;border-bottom:1px solid #e6f3ec;color:#23423a;vertical-align:top;
+  }
+  tbody tr:nth-child(even) td{background:var(--green-paler);}
+  tbody tr:hover td{background:var(--green-pale);}
+  tbody td b{color:var(--green-deep);}
+  .hl-row td{background:linear-gradient(90deg,#e8faf1,#f2fdf7) !important;font-weight:600;}
+
+  /* 强调信息条 */
+  .callout{
+    background:linear-gradient(120deg,var(--green-deep),var(--green-mid));
+    color:#fff;border-radius:16px;padding:26px 34px;margin:28px 0;
+    font-size:19px;line-height:1.85;
+    box-shadow:0 8px 26px rgba(10,92,63,.28);
+  }
+  .callout b{color:#d8ffe9;}
+  .callout.amber{
+    background:linear-gradient(120deg,#8a6410,var(--amber));
+    box-shadow:0 8px 26px rgba(217,160,43,.3);
+  }
+  .callout.amber b{color:#fff3d6;}
+
+  .src{
+    font-size:14.5px;color:#7a9189;margin-top:26px;padding-top:16px;
+    border-top:1px dashed #cfe6da;line-height:1.7;
+  }
+
+  ul.clean{list-style:none;margin:18px 0;}
+  ul.clean li{
+    font-size:18.5px;padding:10px 0 10px 34px;position:relative;color:#2a443b;line-height:1.8;
+  }
+  ul.clean li::before{
+    content:"";position:absolute;left:6px;top:20px;width:12px;height:12px;border-radius:4px;
+    background:linear-gradient(135deg,var(--green-mid),var(--green-bright));
+  }
+  ul.clean li b{color:var(--green-deep);}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:24px 0;}
+  .panel{
+    border-radius:16px;padding:28px 30px;border:1px solid #e0f0e8;background:#fbfefc;
+  }
+  .panel.bad{background:#fdf8f4;border-color:#f0e4d4;}
+  .panel h4{
+    font-size:21px;font-weight:800;margin-bottom:16px;color:var(--green-deep);
+    display:flex;align-items:center;gap:10px;
+  }
+  .panel.bad h4{color:#9a6a1f;}
+  .panel h4 .dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--green-mid),var(--green-bright));}
+  .panel.bad h4 .dot{background:linear-gradient(135deg,#c98f2e,#e3b45c);}
+  .panel ul{list-style:none;}
+  .panel ul li{font-size:17.5px;padding:9px 0;color:#33504a;line-height:1.75;border-bottom:1px dashed #e2efe8;}
+  .panel.bad ul li{border-bottom-color:#efe4d2;color:#4d4231;}
+  .panel ul li:last-child{border-bottom:none;}
+  .panel ul li b{color:var(--green-deep);}
+  .panel.bad ul li b{color:#8a5f14;}
+
+  /* ======== 图一：大市场部职能图（星型，一屏可见） ======== */
+  .org-chart{position:relative;margin:22px auto 4px;max-width:920px;}
+  .org-core{
+    width:196px;margin:0 auto;text-align:center;color:#fff;
+    background:radial-gradient(circle at 35% 30%,#2ec98c,#0e7c55 70%,#0a5c3f);
+    border-radius:50%;padding:34px 12px;position:relative;z-index:2;
+    box-shadow:0 10px 30px rgba(10,92,63,.4);
+  }
+  .org-core .t1{font-size:24px;font-weight:800;letter-spacing:.05em;}
+  .org-core .t2{font-size:13.5px;opacity:.92;margin-top:3px;letter-spacing:.12em;}
+  .org-core .t3{font-size:12.5px;opacity:.8;margin-top:2px;}
+  .org-ring{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 4px;position:relative;z-index:2;
+  }
+  .org-node{
+    background:linear-gradient(160deg,#ffffff,#eefaf3);
+    border:2px solid #bfe6d2;border-radius:12px;padding:10px 12px;text-align:center;
+    box-shadow:0 4px 12px rgba(10,92,63,.1);
+    transition:transform .2s,box-shadow .2s;
+  }
+  .org-node:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(10,92,63,.18);border-color:var(--green-bright);}
+  .org-node h5{font-size:16.5px;font-weight:800;color:var(--green-deep);margin-bottom:4px;}
+  .org-node p{font-size:12.8px;color:#3d5c52;line-height:1.5;}
+  .org-node p b{color:var(--green);}
+  .org-node.side{background:linear-gradient(160deg,#f6fbf3,#ecf7ec);border-color:#cfe4c8;}
+  .org-node.side h5{color:#3f6b34;}
+  .org-note{
+    background:linear-gradient(120deg,#f0faf4,#e6f7ef);border-radius:12px;
+    padding:12px 22px;margin-top:14px;text-align:center;
+  }
+  .org-note .f{font-size:17px;font-weight:800;color:var(--green-deep);letter-spacing:.02em;}
+  .org-note .d{font-size:13px;color:var(--ink-soft);margin-top:3px;}
+  .org-legend{font-size:14px;color:#8aa398;text-align:center;margin-top:12px;}
+
+  /* ======== 图二：品牌战略框架（四层勾稽，一屏可见） ======== */
+  .framework{margin:16px 0 2px;}
+  .fw-title-row{margin-bottom:6px;}
+  .fw-title{font-size:26px;font-weight:800;color:var(--ink);}
+  .fw-sub{font-size:14.5px;color:var(--ink-soft);margin-top:2px;letter-spacing:.02em;}
+  .fw-layer{
+    border:2px dashed #bcd9c9;border-radius:14px;padding:14px 18px 12px;margin:18px 0 10px;position:relative;
+    background:#fdfefd;
+  }
+  .fw-layer .layer-tag{
+    position:absolute;top:-13px;left:18px;
+    background:linear-gradient(135deg,#0a3a2a,var(--green-deep));color:#fff;
+    font-size:13px;font-weight:700;padding:3px 14px;border-radius:14px;letter-spacing:.1em;
+    box-shadow:0 3px 8px rgba(10,92,63,.3);
+  }
+  .fw-layer .layer-tag.green{background:linear-gradient(135deg,var(--green),var(--green-bright));}
+  .fw-grid{display:flex;gap:10px;align-items:stretch;margin-top:6px;flex-wrap:nowrap;}
+  .fw-main{
+    background:linear-gradient(135deg,#0a3a2a,#0f5c40);color:#fff;border-radius:10px;
+    padding:10px 14px;font-size:15.5px;font-weight:800;display:flex;align-items:center;
+    min-width:130px;justify-content:center;text-align:center;letter-spacing:.04em;
+    box-shadow:0 4px 12px rgba(10,92,63,.3);flex-shrink:0;
+  }
+  .fw-main.green{background:linear-gradient(135deg,var(--green),var(--green-bright));}
+  .fw-card{
+    flex:1;min-width:0;background:#f2faf5;border:1.5px solid #d3e9dc;border-radius:10px;
+    padding:7px 10px;
+  }
+  .fw-card h6{font-size:14px;font-weight:800;color:var(--green-deep);text-align:center;margin-bottom:2px;}
+  .fw-card p{font-size:11.5px;color:#557066;text-align:center;line-height:1.45;}
+  .fw-out{
+    margin-top:8px;background:var(--green-paler);border-radius:8px;padding:7px 12px;
+  }
+  .fw-out .k{font-size:13px;font-weight:800;color:var(--green-deep);}
+  .fw-out .v{font-size:12px;color:#4a6359;line-height:1.5;margin-top:2px;}
+  /* 4P 大卡 */
+  .fw-4p{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px;}
+  .p-card{border-radius:10px;overflow:hidden;border:1.5px solid #d3e9dc;background:#fff;
+    box-shadow:0 3px 10px rgba(10,92,63,.08);}
+  .p-card .ph{
+    color:#fff;font-size:13.5px;font-weight:800;padding:7px 10px;letter-spacing:.04em;
+  }
+  .p-card:nth-child(1) .ph{background:linear-gradient(135deg,var(--green-deep),var(--green));}
+  .p-card:nth-child(2) .ph{background:linear-gradient(135deg,#4a4a4a,#6b6b6b);}
+  .p-card:nth-child(3) .ph{background:linear-gradient(135deg,#6d6d6d,#8f8f8f);}
+  .p-card:nth-child(4) .ph{background:linear-gradient(135deg,#b07f16,var(--amber));}
+  .p-card ul{list-style:none;padding:8px 10px;}
+  .p-card ul li{font-size:11.8px;color:#3d5c52;padding:4px 0 4px 14px;position:relative;line-height:1.45;
+    border-bottom:1px dashed #e8f2ec;}
+  .p-card ul li:last-child{border-bottom:none;}
+  .p-card ul li::before{content:"·";position:absolute;left:1px;color:var(--green-mid);font-weight:900;font-size:16px;}
+  .p-card:nth-child(4){background:linear-gradient(160deg,#fffdf5,#fdf6e3);border-color:#ecd9a8;}
+  .p-card:nth-child(4) ul li{color:#5c4d24;}
+  .fw-bottom{
+    margin-top:18px;background:linear-gradient(120deg,var(--green-deep),var(--green-mid));
+    color:#fff;text-align:center;border-radius:12px;padding:13px 20px;
+    box-shadow:0 6px 18px rgba(10,92,63,.3);
+  }
+  .fw-bottom .l1{font-size:15.5px;font-weight:800;letter-spacing:.05em;}
+  .fw-bottom .l2{font-size:12px;opacity:.85;margin-top:3px;}
+  .fw-arrow{display:flex;justify-content:center;margin:0;color:var(--green-mid);font-size:16px;line-height:1;}
+
+  /* 步骤卡 */
+  .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin:26px 0;}
+  .step-card{
+    background:linear-gradient(160deg,#ffffff,#f0faf4);border:1.5px solid #d5ecdf;border-radius:18px;
+    padding:28px 30px;position:relative;overflow:hidden;
+  }
+  .step-card::after{
+    content:attr(data-n);position:absolute;right:14px;top:6px;font-size:64px;font-weight:900;
+    color:rgba(14,124,85,.08);
+  }
+  .step-card h5{font-size:21px;font-weight:800;color:var(--green-deep);margin-bottom:6px;}
+  .step-card .q{font-size:15.5px;color:var(--green);font-weight:600;margin-bottom:10px;}
+  .step-card p{font-size:16.5px;color:#33504a;line-height:1.8;}
+  .step-card .deliver{
+    margin-top:14px;display:inline-block;background:var(--green-pale);color:var(--green-deep);
+    font-size:15px;font-weight:700;padding:6px 16px;border-radius:20px;border:1px solid #bfe6d2;
+  }
+
+  /* 伙伴卡 */
+  .partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:26px 0;}
+  .partner{
+    background:#fff;border:1.5px solid #d5ecdf;border-radius:18px;padding:30px 28px;
+    box-shadow:0 6px 20px rgba(10,92,63,.08);position:relative;overflow:hidden;
+  }
+  .partner::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:6px;
+    background:linear-gradient(90deg,var(--green-deep),var(--green-bright));
+  }
+  .partner h5{font-size:23px;font-weight:800;color:var(--ink);}
+  .partner .role{font-size:15.5px;color:var(--green);font-weight:700;margin:4px 0 14px;letter-spacing:.04em;}
+  .partner ul{list-style:none;}
+  .partner ul li{font-size:15.5px;color:#3d5c52;padding:7px 0 7px 18px;position:relative;line-height:1.7;
+    border-bottom:1px dashed #e8f2ec;}
+  .partner ul li:last-child{border-bottom:none;}
+  .partner ul li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:50%;
+    background:var(--green-bright);}
+  .partner-grid.two{grid-template-columns:repeat(2,1fr);max-width:820px;margin-left:auto;margin-right:auto;}
+
+  /* 平台名单 */
+  .chips{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0;}
+  .chip{
+    background:linear-gradient(135deg,var(--green-pale),#dff5ea);border:1.5px solid #bfe6d2;
+    color:var(--green-deep);font-size:16.5px;font-weight:600;padding:9px 20px;border-radius:30px;
+  }
+  .chip span{color:#6b877d;font-weight:400;font-size:14px;margin-left:6px;}
+  .client-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0;}
+  .client{
+    background:#fff;border:1.5px solid #d5ecdf;border-radius:12px;padding:14px 18px;
+    font-size:17.5px;font-weight:700;color:var(--green-deep);text-align:center;
+  }
+
+  .divider-quote{
+    text-align:center;padding:70px 8vw;margin:56px 0;
+    background:linear-gradient(135deg,#0a5c3f,#0e7c55 55%,#16a06f);
+    border-radius:22px;color:#fff;box-shadow:0 12px 36px rgba(10,92,63,.3);
+  }
+  .divider-quote .big{font-size:clamp(24px,3vw,36px);font-weight:800;line-height:1.6;}
+  .divider-quote .big em{font-style:normal;color:var(--green-light);}
+  .divider-quote .small{margin-top:18px;font-size:17px;color:#c8f0dd;}
+
+  footer.foot{
+    text-align:center;padding:50px 20px 70px;color:#7a9189;font-size:15px;letter-spacing:.08em;
+  }
+
+  @media (max-width:900px){
+    section.slide{padding:44px 30px;}
+    .two-col,.steps,.partner-grid,.partner-grid.two,.fw-4p{grid-template-columns:1fr;}
+    .org-ring{grid-template-columns:1fr 1fr;}
+    .client-list{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= 封面 ================= -->
+<div class="cover">
+  <div class="kicker">Marketing Operations Proposal</div>
+  <h1>面向 B2B <em>同质化竞争</em> 的<br>市场营销服务</h1>
+  <p class="sub">用户在数字世界完成自我教育，然后才选择品牌。<br>我们提供完整的市场营销体系框架——先决策，再投放，最后才谈优化。</p>
+  <div class="formula-badge">同质化的竞争，<b>不能用同质化的内容</b></div>
+  <div class="meta">MARKETING OPERATIONS PROPOSAL · 2026 v2.0</div>
+</div>
+
+<div class="wrap">
+
+<!-- ================= 02 科特勒 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">02</div><div class="tag">Philip Kotler · Marketing 4.0</div></div>
+  <h2 class="slide-title">科特勒《营销 4.0》</h2>
+  <h3 class="slide-lead">用户在数字世界完成自我教育，然后才选择品牌——<b>销售介入时，采购旅程往往已走完大半</b></h3>
+  <blockquote>
+    <b>"用户在数字的世界完成自我教育，然后选择品牌。"</b>
+    <span class="who">—— 菲利普·科特勒《Marketing 4.0：从传统到数字》(2017)</span>
+  </blockquote>
+  <blockquote>
+    <b>"用户不再区分线上和线下。"</b>
+    <span class="who">—— 全渠道时代，旅程是一条连续的线</span>
+  </blockquote>
+  <div class="two-col" style="margin-top:26px">
+    <div class="panel">
+      <h4><span class="dot"></span>营销范式的四次迁移</h4>
+      <ul>
+        <li><b>1.0 产品中心</b>：工业化大规模生产，比拼供给稀缺</li>
+        <li><b>2.0 客户导向</b>：细分与定位，比拼差异化</li>
+        <li><b>3.0 价值观驱动</b>：使命与意义，比拼认同</li>
+        <li><b>4.0 自我教育</b>：买方先完成研究再接触销售，比拼<b>可被发现性与可验证性</b></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4><span class="dot"></span>对 B2B 企业的三个推论</h4>
+      <ul>
+        <li>买方不是"被说服"，而是<b>"自己想明白"</b>——营销的任务是供给他想明白的材料</li>
+        <li>线上与线下边界消失——搜索、社媒、展会、拜访是同一条旅程的不同片段</li>
+        <li>看不见的地方正在决定看得见的成交——A1–A3 阶段的无声比较先筛掉了大多数人</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 营销对成交的意义 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">03</div><div class="tag">CEB / Gartner B2B Buyer Journey</div></div>
+  <h2 class="slide-title">营销对于成交的意义</h2>
+  <h3 class="slide-lead">买方五阶段（5A）：<b>A3 判断阶段是自我教育的主战场</b>，决定谁进入候选名单</h3>
+  <table>
+    <thead><tr><th style="width:90px">阶段</th><th style="width:130px">名称</th><th>含义</th></tr></thead>
+    <tbody>
+      <tr><td><b>A1</b></td><td>了解</td><td>被动接触品牌信息</td></tr>
+      <tr><td><b>A2</b></td><td>吸引</td><td>产生兴趣与好感</td></tr>
+      <tr class="hl-row"><td><b>A3</b></td><td>判断</td><td><b>搜索 · 比较 · 验证——自我教育主战场</b></td></tr>
+      <tr><td><b>A4</b></td><td>行动</td><td>下单 · 签约（传统销售介入点）</td></tr>
+      <tr><td><b>A5</b></td><td>拥护</td><td>复购 · 推荐</td></tr>
+    </tbody>
+  </table>
+  <ul class="clean">
+    <li><b>A1–A3</b>：数字内容主导，销售尚未介入</li>
+    <li><b>A4</b>：传统销售介入点</li>
+  </ul>
+  <div class="callout">
+    <b>对 B2B 的含义：</b>据 CEB/Gartner 对 B2B 采购的研究，买方在首次联系销售人员之前，已独立完成采购流程约 <b>57%</b>；采购委员会平均 <b>6–10 人</b>。他们在 A1–A3 阶段搜索、比较、验证的内容，决定了 A4 谁被列入候选名单。
+  </div>
+  <div class="two-col">
+    <div class="panel">
+      <h4><span class="dot"></span>采购委员会：6–10 人的集体决策</h4>
+      <ul>
+        <li><b>发起者</b>：一线使用者，最先感知痛点、发起立项</li>
+        <li><b>影响者</b>：技术 / 财务，各自用不同标准打分</li>
+        <li><b>决策者</b>：掌握预算的最终拍板人</li>
+        <li><b>把关者</b>：控制信息流入，决定谁能进场</li>
+        <li><b>采购者</b>：执行商务谈判与签约</li>
+      </ul>
+      <p style="font-size:15px;color:#557066;margin-top:10px;">同一份内容要同时回答六种人的六种疑问——这是 B2B 内容比 B2C 复杂的根源。</p>
+    </div>
+    <div class="panel">
+      <h4><span class="dot"></span>营销漏斗：57% 意味着什么</h4>
+      <ul>
+        <li><b>意识</b> → 触达：行业内容、展会、社媒——被动种草</li>
+        <li><b>研究</b> → 搜索：官网、白皮书、案例——主动验证</li>
+        <li><b>比较</b> → 短名单：竞品对比、第三方口碑——隐性淘汰</li>
+        <li><b>购买</b> → 销售：进入 A4，此时名单已定</li>
+        <li><b>拥护</b> → 复购推荐：客户案例反哺漏斗顶端</li>
+      </ul>
+      <p style="font-size:15px;color:#557066;margin-top:10px;">前 57% 的旅程里没有销售在场——缺席那段旅程的品牌，根本进不了后面的名单。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 完整的市场职能（图一复刻） ================= -->
+<section class="slide" style="padding:44px 56px;">
+  <div class="sec-no"><div class="num">04</div><div class="tag">完整的市场职能</div></div>
+  <h2 class="slide-title">大市场部：企业的增长引擎与中台</h2>
+  <h3 class="slide-lead">五大职能覆盖成交与增长两条线，并与研发、售前、售后、销售跨部门协同</h3>
+
+  <div class="org-chart">
+    <div class="org-ring">
+      <div class="org-node side"><h5>研发技术</h5><p>需求与竞品情报回传</p></div>
+      <div class="org-node"><h5>营销获客</h5><p>线索供给<br>增长上限</p></div>
+      <div class="org-node side"><h5>售前</h5><p>方案 · POC 差异化弹药</p></div>
+      <div class="org-node"><h5>产品市场</h5><p>差异化赢单率<br>定价支撑</p></div>
+      <div class="org-core">
+        <div class="t1">大市场部</div>
+        <div class="t2">Growth Engine</div>
+        <div class="t3">增长引擎 · 中台</div>
+      </div>
+      <div class="org-node"><h5>品牌</h5><p>信任状缩短决策<br>心智降获客成本</p></div>
+      <div class="org-node side"><h5>售后</h5><p>客户成功 → 复购转介绍</p></div>
+      <div class="org-node"><h5>企划 · 活动</h5><p>展会加速商机<br>沉淀自有流量池</p></div>
+      <div class="org-node"><h5>运营</h5><p>孵化提升转化<br>私域复购 · LTV</p></div>
+    </div>
+    <div class="org-ring" style="grid-template-columns:1fr;margin-top:0;">
+      <div class="org-node side"><h5>销售</h5><p>接 MQL → 成交转化</p></div>
+    </div>
+    <div class="org-note">
+      <div class="f">市场部 = 成交的"无形销售" + 增长的"复利资产"</div>
+      <div class="d">五大职能覆盖买方旅程全程：A1–A3 阶段买方自我教育的内容供给，A4 阶段销售的差异化弹药，A5 阶段复购与转介绍的私域运营</div>
+    </div>
+    <div class="org-legend">— 市场部五大职能　⇢ 跨部门协同（串联）</div>
+  </div>
+</section>
+
+<!-- ================= 05 客户现状 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">05</div><div class="tag">客户的现状</div></div>
+  <h2 class="slide-title">年度复盘的真相：每个部门都在更努力地做昨天的事</h2>
+  <h3 class="slide-lead">当所有人都因内卷感到疲惫和困惑，复盘给出的答案仍是<b>"加倍投入"</b></h3>
+  <table>
+    <thead><tr><th style="width:110px">部门</th><th>年度复盘的动作</th><th>主要内耗</th></tr></thead>
+    <tbody>
+      <tr><td><b>销售</b></td><td>用更努力的拜访、更勤的跟进，寻找增量</td><td>操作服务不好 · 技术不够领先</td></tr>
+      <tr><td><b>市场</b></td><td>坚持投入、扩大合作，预算逐年加码</td><td>销售转化太差 · 技术不够领先</td></tr>
+      <tr><td><b>运营</b></td><td>继续想办法提高人效，压缩单位成本</td><td>销售不遵守规则 · 谈的都是亏本业务</td></tr>
+      <tr><td><b>技术</b></td><td>继续钻研热爱的方向，堆叠产品能力</td><td>销售不识货 · 谈的都是亏本业务</td></tr>
+    </tbody>
+  </table>
+  <blockquote>
+    <b>"越做越好的事情越会被重复，组织最终被锁死在过时的能力里。"</b>
+    <span class="who">—— 能力陷阱（Competence Trap），Levitt & March, 1988</span>
+  </blockquote>
+  <blockquote>
+    <b>"组织倾向在'邻近的、熟悉的、曾成功的'时空范围内取样学习。"</b>
+    <span class="who">—— 短视学习（Myopia of Learning），Levinthal & March, 1993</span>
+  </blockquote>
+  <div class="callout">
+    <b>更努力解决的是"强度"问题；买方行为已经迁移，需要解决的是"方向"问题。</b>四个部门都在既有路径上优化，而买方的自我教育早已发生在既有路径覆盖不到的地方。这正是外部营销框架介入的价值：不带历史包袱，从买方旅程倒推资源应该投在哪里。
+  </div>
+  <p class="src">来源：T. Levitt & J. March (1988), Organizational Learning；D. Levinthal & J. March (1993), The Myopia of Learning</p>
+  <div class="two-col">
+    <div class="panel">
+      <h4><span class="dot"></span>探索式利用：组织学习理论的核心框架</h4>
+      <ul>
+        <li><b>利用（Exploitation）</b>：把既有能力做精——提效、降本、标准化，回报确定但递减</li>
+        <li><b>探索（Exploration）</b>：寻找新路径——新渠道、新品类、新内容形态，回报不确定但可能跳跃</li>
+        <li>四个部门的复盘全落在"利用"一侧——<b>组织在系统性缺席"探索"</b></li>
+        <li>内卷的本质：利用的边际收益递减后，靠加大强度维持增速</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4><span class="dot"></span>为什么外部框架能打破僵局</h4>
+      <ul>
+        <li><b>无历史包袱</b>：不受"过去靠什么成功"的路径约束，能客观评估新路径</li>
+        <li><b>跨行业样本</b>：见过同类问题在不同行业的解法，避免本行业的集体盲区</li>
+        <li><b>从买方倒推</b>：以买方旅程为锚重新分配资源，而非以组织惯性为锚</li>
+        <li>外部视角的价值不是"更聪明"，而是<b>不被内部的沉没成本绑架</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05b 我们的来时路 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">05</div><div class="tag">我们的来时路</div></div>
+  <h2 class="slide-title">我们从产业互联网一线来</h2>
+  <h3 class="slide-lead">撮合平台最大的流量增量，来自<b>抖音和视频号</b></h3>
+  <p class="body-p"><b>linker.net 服务过的化工产业客户：</b></p>
+  <div class="client-list">
+    <div class="client">中国化学-齐翔腾达</div>
+    <div class="client">中国化学-天辰耀隆</div>
+    <div class="client">东华天业</div>
+    <div class="client">福建申远</div>
+    <div class="client">上海华谊</div>
+    <div class="client">宁波金发</div>
+  </div>
+  <div class="callout">
+    <b>一线观察，也是我们转向的起点：</b>在服务这些化工撮合平台的过程中，我们发现大多数平台——即使是 B2B 大型撮合平台——都在通过视频号、抖音获取流量。2019 年前后，平台上最大的流量增量来自抖音。
+  </div>
+  <p class="body-p"><b>各垂直行业重演——15 个活跃的产业互联网平台：</b></p>
+  <div class="chips">
+    <div class="chip">俺搜<span>化工</span></div>
+    <div class="chip">我要测<span>检测</span></div>
+    <div class="chip">找钢网<span>钢铁</span></div>
+    <div class="chip">欧冶云商<span>钢铁</span></div>
+    <div class="chip">国联股份·多多系<span>产业带</span></div>
+    <div class="chip">化塑汇<span>化工</span></div>
+    <div class="chip">快塑网<span>塑料</span></div>
+    <div class="chip">摩贝<span>化工</span></div>
+    <div class="chip">震坤行<span>工业品</span></div>
+    <div class="chip">锐锢商城<span>工业品</span></div>
+    <div class="chip">慧聪网<span>综合</span></div>
+    <div class="chip">锦桥纺织网<span>纺织</span></div>
+    <div class="chip">找塑料<span>塑料</span></div>
+    <div class="chip">我的塑料网<span>塑料</span></div>
+    <div class="chip">中国制造网<span>跨境</span></div>
+  </div>
+</section>
+
+<!-- ================= 06 流量密码 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">06</div><div class="tag">流量密码</div></div>
+  <h2 class="slide-title">电商平台的本质是流量二批商</h2>
+  <h3 class="slide-lead">平台通过会员费收入购买流量，<b>1 元钱成本的流量兑水 13–260 倍的会员费收入</b></h3>
+  <p class="body-p">按公开财报及投放数据估算：</p>
+  <table>
+    <thead><tr><th>平台</th><th>年流量采购成本（估）</th><th>会员费+广告收入（扣佣金后）</th><th style="width:150px">流量价差倍数</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>Made-in-China</b></td>
+        <td>约 1.2 亿（Google 采购 0.8–1.0 亿 + 品牌广告 0.36 亿）</td>
+        <td>16.01 亿（基本无交易佣金）</td>
+        <td><b>13–16x</b></td>
+      </tr>
+      <tr>
+        <td><b>Alibaba.com 国际站</b></td>
+        <td>3–7 亿（集团 Google 投放 $3–10 亿 × 国际站分摊 15–20%）</td>
+        <td>约 259–261 亿（264.39 亿 − 信保佣金 3–5 亿）</td>
+        <td><b>37–87x</b></td>
+      </tr>
+      <tr>
+        <td><b>1688</b></td>
+        <td>&lt;1 亿（淘系免费导流 + 自然流量为主）</td>
+        <td>约 260 亿（佣金极低）</td>
+        <td><b>&gt;260x</b></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="body-p"><b>平台流量机制：</b>你缴会员费（获取"线上身份"）→ 平台采购流量（Google / 品牌广告）→ 汇入平台流量池（统一分配）→ 分配 + 让你竞价（再收一遍广告费）</p>
+  <ul class="clean">
+    <li><b>规则一：</b>平台收费后，从它自己的流量池里分你一份——然后让你和别人竞价。位置越好，加价越多。</li>
+    <li><b>规则二：</b>有时池子里没有现成流量，就看你自己能不能做出来——这个窗口叫"红利期"。红利属于先做内容的人，之后变回竞价。</li>
+    <li><b>规则三：</b>你的会员费更多用于平台给自己推广。Made-in-China 最大的流量来源，是它自己的品牌词——你在替平台买它自己的名字。</li>
+  </ul>
+
+  <h3 class="slide-lead" style="margin-top:40px">那你一年到底要花多少？——<b>卖家真实年投入</b></h3>
+  <table>
+    <thead><tr><th>投入档位</th><th>Alibaba.com 国际站</th><th>Made-in-China</th><th style="width:170px">年投入合计（区间）</th></tr></thead>
+    <tbody>
+      <tr><td><b>入门档</b><br>（刚起步/测试期）</td><td>出口通 2.98 万 + 直通车首充 1 万（P4P 起充 1 万，不可省）</td><td>金牌会员 3.11 万（基础广告另计）</td><td><b>12.0 – 15 万</b></td></tr>
+      <tr class="hl-row"><td><b>主流档</b><br>（多数活跃卖家实际状态）</td><td>出口通 AI 版 3.58 万 + 广告 3 万</td><td>钻石会员 5.98 万 + 固定排名词 0.4–1.6 万/词</td><td><b>20 – 25 万</b></td></tr>
+      <tr><td><b>进阶档</b><br>（规模投放）</td><td>金品诚企 8–9 万 + 广告 5 万+</td><td>钻石会员 + 多词固定排名 + 数据管家 0.36 万</td><td><b>36 – 45 万+</b></td></tr>
+      <tr><td><b>头部档</b></td><td>行业领袖 PRO 50 万起</td><td>——</td><td><b>100 万+</b></td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <b>交叉验证：</b>焦点科技 2024 年报——中国制造网付费会员 27,415 位、平台收入 13.56 亿，<b>单会员年均贡献（ARPPU）5.21 万元</b>；2025 年升至约 5.37 万。也就是说，MIC 的"平均客户"一年交给平台 5 万多，还不含站外 Google 投放与人力。
+  </div>
+
+  <h3 class="slide-lead" style="margin-top:40px">第 1、2 年能否回本？——<b>三档情景测算</b></h3>
+  <table>
+    <thead><tr><th>情景</th><th style="width:90px">年投入</th><th>询盘量（行业经验值）</th><th>成交假设</th><th>首年毛利</th><th>结论</th></tr></thead>
+    <tbody>
+      <tr><td><b>悲观</b><br>（冷启动慢/竞争激烈类目）</td><td>6.6 万</td><td>150 条（约 12–13 条/月）</td><td>3% × $8,500 客单（4–5 单）</td><td>约 1.7 万（毛利率 10% 口径）</td><td><b>第 1 年亏损 4.9 万</b>，第 2 年复购拉平，约 2.5–3 年回本</td></tr>
+      <tr class="hl-row"><td><b>中性</b><br>（行业平均水平）</td><td>8.6 万</td><td>300 条</td><td>4.6% × $8,500（约 14 单）</td><td>约 8.4 万（毛利率 20% 口径）</td><td><b>第 1 年基本打平</b>，第 2 年复购后净赚，整体 2 年回本</td></tr>
+      <tr><td><b>乐观</b><br>（优质运营/爆品类的 10–20%）</td><td>13 万</td><td>600+ 条</td><td>5% × $8,500+（30 单+）</td><td>约 25 万+（官方口径 ROI 1:4.3）</td><td><b>第 1 年即回本</b>，第 2 年利润释放</td></tr>
+    </tbody>
+  </table>
+  <blockquote>
+    <b>对多数卖家：平台投入 6.6–13 万/年，行业平均约 2 年回本，仅 10–20% 的优质运营首年回本。</b>而且回本的前提是持续投入——直通车一停，询盘即降。这正是"流量租用"与"流量自有"的分水岭：同样的钱，第 1 年买询盘，第 3 年还在买询盘；换成内容资产，第 1 年投入，第 3 年复利。
+  </blockquote>
+  <div class="callout">
+    <b>结构性结论：在二批商模式下，你的获客成本永远随竞价上涨；会员费只是门票，广告费才是无底洞。</b>拥有自己的内容流量，等于绕过二批商，直接向一级市场进货。
+  </div>
+  <p class="src">来源：焦点科技 2024/2025 年报（ARPPU 5.21–5.37 万、付费会员 27,415–29,793 位）；阿里巴巴国际站 2025 公开价目（出口通 2.98 万 / AI 版 3.58 万 / 金品 8–9 万）；MIC 会员价目（金牌 3.11 万 / 钻石 5.98 万）；询盘量与成交率为行业经验假设，供决策参考</p>
+</section>
+
+<!-- ================= 07 流量决策 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">07</div><div class="tag">流量决策</div></div>
+  <h2 class="slide-title">渠道没有绝对好坏</h2>
+  <h3 class="slide-lead" style="margin-top:-18px">客单价与成交率不同，<b>同一渠道的 ROI 相差百倍</b></h3>
+  <p class="body-p">测算基准：Google 单询盘成本 $85.63，统一假设：</p>
+  <table>
+    <thead><tr><th>客单价</th><th>Google 单询盘成本</th><th>成交率假设</th><th>Google ROI（首单）</th><th>TikTok 可持续 ROI</th></tr></thead>
+    <tbody>
+      <tr><td><b>$500</b></td><td>$85.63</td><td>2%</td><td>0.13x（纯人工跟单）/ 3–4x（自动报价+复购）</td><td>1.2x</td></tr>
+      <tr><td><b>$5,000</b></td><td>$85.63</td><td>4–5%</td><td>2.5x / LTV 6–8x</td><td>5–6x</td></tr>
+      <tr class="hl-row"><td><b>$20,000</b></td><td>$85.63</td><td>5%</td><td>12.6x / LTV 50–80x</td><td><b>20–30x</b></td></tr>
+    </tbody>
+  </table>
+  <p class="body-p"><b>三条决策规则：</b></p>
+  <ul class="clean">
+    <li><b>低客单 + 人工跟单 = 付费搜索亏损结构</b>，先改成交方式再谈投放</li>
+    <li><b>复购与 LTV 决定预算上限</b>，单看首单 ROI 会错杀渠道</li>
+    <li><b>"选什么渠道、付不付费"没有通用答案</b>，只能用你自己的客单价、成交率、复购结构算出来——这正是下一页框架要解决的问题</li>
+  </ul>
+  <div class="two-col">
+    <div class="panel">
+      <h4><span class="dot"></span>单位经济学：一张表算清一个渠道</h4>
+      <ul>
+        <li><b>CAC</b>（获客成本）= 渠道总投入 ÷ 新成交客户数</li>
+        <li><b>LTV</b>（客户终身价值）= 客单价 × 毛利率 × 复购次数 + 转介绍折算</li>
+        <li><b>LTV / CAC ≥ 3</b>：渠道健康，可加预算</li>
+        <li><b>LTV / CAC &lt; 1</b>：越投放越亏，先改产品与转化，再谈渠道</li>
+        <li>回本周期 = CAC ÷ 单客户月均毛利——决定现金流能撑几个渠道</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4><span class="dot"></span>渠道组合：租来的 vs 自有的</h4>
+      <ul>
+        <li><b>租用流量</b>（平台会员、竞价广告）：见效快、随竞价涨价、停投即断</li>
+        <li><b>自有流量</b>（内容资产、私域、品牌搜索）：见效慢、边际成本递减、复利</li>
+        <li>健康结构 = <b>租用打现金牛 + 自有建护城河</b>，比例随行业周期调整</li>
+        <li>判断标准：若停掉某渠道投放，3 个月内询盘掉七成——那是租的，不是你的</li>
+      </ul>
+    </div>
+  </div>
+  <p class="src">来源：内部测算模型；Google 询盘成本取行业均值 $85.63，成交率为分档假设，供决策参考</p>
+</section>
+
+<!-- ================= 08 我们的框架 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">08</div><div class="tag">我们的框架</div></div>
+  <h2 class="slide-title">线上线下一个漏斗</h2>
+  <h3 class="slide-lead">从买方自我教育到成交复购的<b>全链路设计</b>——线上引擎打认知，线下引擎建信任，交汇层完成转化</h3>
+  <table>
+    <thead><tr><th>线上引擎 · 内容与流量</th><th>交汇 · 信任与转化</th><th>线下引擎 · 关系与体验</th></tr></thead>
+    <tbody>
+      <tr><td><b>内容矩阵：</b>短视频 / 直播 / 白皮书 / 案例库</td><td><b>线索孵化：</b>内容触达 → 留资 → 分层</td><td><b>行业展会：</b>参展 / 演讲 / 获客名单</td></tr>
+      <tr><td><b>搜索占位：</b>SEO / GEO（AI 问答）/ 官网</td><td><b>商机确认：</b>销售在线上线索中接手跟进</td><td><b>上门拜访：</b>大客户关键人触达</td></tr>
+      <tr><td><b>私域沉淀：</b>企微 / 邮件 / 社群 / 直播间</td><td><b>成交与交付：</b>方案 → 报价 → 签约</td><td><b>客户参观：</b>工厂 / 实验室参观日</td></tr>
+    </tbody>
+  </table>
+  <p class="body-p" style="text-align:center;color:var(--green);font-weight:700;">数据回流 → 内容迭代 → 渠道预算再分配 → 回到全链路目标（每月复盘校准一次）</p>
+  <div class="callout">
+    <b>框架的用处：</b>线上引擎影响买方的"自我教育"（A1–A3），线下引擎完成"关系与信任"（A4–A5），交汇层让两条线共享同一个线索池与数据看板——每季度用回流数据重新分配预算，而非按去年惯性续费。
+  </div>
+  <div class="two-col">
+    <div class="panel">
+      <h4><span class="dot"></span>漏斗 vs 飞轮：两条线怎么咬合</h4>
+      <ul>
+        <li><b>漏斗逻辑</b>（线上）：内容 → 触达 → 留资 → 商机 → 成交，逐层收窄、可量化</li>
+        <li><b>飞轮逻辑</b>（线下+私域）：成交 → 交付体验 → 案例与口碑 → 反哺漏斗顶端的内容资产</li>
+        <li>两条线在交汇层共享线索池——<b>线上产出的线索由线下关系承接，线下触达的客户被线上内容持续孵化</b></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4><span class="dot"></span>线索生命周期：从 MQL 到转介绍</h4>
+      <ul>
+        <li><b>触达</b> → 留资（内容下载/表单/加微）</li>
+        <li><b>MQL</b> 市场合格线索：有预算迹象 + 匹配画像</li>
+        <li><b>SQL</b> 销售合格线索：确认需求、时间窗、决策人</li>
+        <li><b>商机</b> → 方案报价 → 签约交付</li>
+        <li><b>客户</b> → 案例沉淀 → 转介绍新线索——回到起点</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 市面上的方案 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">09</div><div class="tag">方案对比</div></div>
+  <h2 class="slide-title">市面上的方案各管一段</h2>
+  <h3 class="slide-lead">获客的不管转化，做转化的不算利润，利润不管口碑，口碑不管增长</h3>
+  <div class="two-col">
+    <div class="panel bad">
+      <h4><span class="dot"></span>市面上的方案</h4>
+      <ul>
+        <li>执着推介一个渠道——"你该做抖音""你该投 Google Ads"</li>
+        <li>解决获客的，不解决转化——询盘交到你手上就算交付</li>
+        <li>解决转化的，不考虑利润——GMV 做起来了，账算不过来</li>
+        <li>渠道商的利益决定建议：卖什么，就推荐你买什么</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4><span class="dot"></span>我们提供的</h4>
+      <ul>
+        <li>整个市场营销的<b>体系框架</b>——先看全链路，再决定投不投、投哪个</li>
+        <li>每个选择的<b>价格与方法论</b>——用你的客单价、成交率、复购结构算清账</li>
+        <li>对结果负责的边界清晰：线索、转化、利润逐层约定</li>
+        <li>立场中立——框架里没有必须卖的渠道</li>
+      </ul>
+    </div>
+  </div>
+  <blockquote>
+    <b>"如何决策哪个渠道适合你"——这个问题本身，就是一个关键问题。</b>我们提供选择的框架、价格和方法论；先决策，再投放，最后才谈优化。
+  </blockquote>
+</section>
+
+<!-- ================= 10 我们的专注 ================= -->
+<div class="divider-quote">
+  <div class="big">我们专门解决 B2B 同质化市场营销。<br><em>同质化的竞争，不能用同质化的内容。</em></div>
+  <div class="small">当产品、价格、服务在买方眼中难以区分时，内容还在用同一套行业话术——"品质保障、服务至上、价格优惠"——等于在同质化之上再叠一层同质化。破局从内容的差异化开始，而内容的差异化来自产品的差异化。</div>
+  <div class="small" style="margin-top:22px;font-size:15.5px;">定位理论（Ries & Trout）：竞争的终极单位不是产品，是心智——买方心智中每个品类只给少数品牌留位置。差异化不是"说不同的话"，是<b style="color:var(--green-light)">找到"你有而对手没有"的那个事实</b>，再把它翻译到买方自我教育的路径上。</div>
+</div>
+
+<!-- ================= 11 方法论框架（图二复刻） ================= -->
+<section class="slide" style="padding:44px 56px;">
+  <div class="sec-no"><div class="num">11</div><div class="tag">方法论框架</div></div>
+  <h2 class="slide-title">品牌战略框架</h2>
+  <h3 class="slide-lead" style="margin-bottom:14px">洞察 → 定位 → 营销 → 销售支持 · <b>每层向下输出弹药，向上回收数据</b></h3>
+
+  <div class="framework">
+    <!-- 洞察层 -->
+    <div class="fw-layer">
+      <div class="layer-tag">洞察</div>
+      <div class="fw-grid">
+        <div class="fw-main">市场洞察</div>
+        <div class="fw-card"><h6>竞品洞察</h6><p>对手在打什么牌</p></div>
+        <div class="fw-card"><h6>用户洞察</h6><p>买方自我教育路径</p></div>
+        <div class="fw-card"><h6>趋势洞察</h6><p>政策 · 平台 · 技术窗口</p></div>
+      </div>
+      <div class="fw-out">
+        <div class="k">输出：定位的依据</div>
+        <div class="v">竞品在抢谁、用户在哪儿自我教育、哪个窗口正在打开</div>
+      </div>
+    </div>
+    <div class="fw-arrow">▼</div>
+
+    <!-- 定位层 -->
+    <div class="fw-layer">
+      <div class="layer-tag green">定位</div>
+      <div class="fw-grid">
+        <div class="fw-main green">品牌战略</div>
+        <div class="fw-card"><h6>品类</h6><p>你是什么？一说就懂</p></div>
+        <div class="fw-card"><h6>特性</h6><p>有何不同？可防守的差异点</p></div>
+        <div class="fw-card"><h6>信任状</h6><p>何以见得？资质 · 案例 · 数据</p></div>
+      </div>
+      <div class="fw-out">
+        <div class="k">输出：配称（Fit）</div>
+        <div class="v">名字/视觉/价格带/渠道/内容全部与定位一致——配称决定定位站不站得住</div>
+      </div>
+    </div>
+    <div class="fw-arrow">▼</div>
+
+    <!-- 营销层 4P -->
+    <div class="fw-layer">
+      <div class="layer-tag">营销 · 4P</div>
+      <div class="fw-grid" style="margin-bottom:2px;">
+        <div class="fw-main">市场营销 4P</div>
+      </div>
+      <div class="fw-4p">
+        <div class="p-card">
+          <div class="ph">产品 PRODUCT</div>
+          <ul>
+            <li>品类化命名</li>
+            <li>产品信任状</li>
+            <li>差异化卖点清单</li>
+            <li>新品节奏与叙事</li>
+          </ul>
+        </div>
+        <div class="p-card">
+          <div class="ph">渠道 PLACE</div>
+          <ul>
+            <li>自有：官网/私域</li>
+            <li>平台：国际站/MIC/1688</li>
+            <li>内容：抖音/视频号</li>
+            <li>线下：展会/参观日</li>
+          </ul>
+        </div>
+        <div class="p-card">
+          <div class="ph">价格 PRICE</div>
+          <ul>
+            <li>定价即定位</li>
+            <li>分层报价：入门/旗舰</li>
+            <li>锚定设计</li>
+            <li>ROI 回本话术</li>
+          </ul>
+        </div>
+        <div class="p-card">
+          <div class="ph">促销 PROMOTION</div>
+          <ul>
+            <li>IP 打造</li>
+            <li>社媒矩阵</li>
+            <li>白皮书/案例库</li>
+            <li>GEO/SEO 占位</li>
+            <li>展会/大促/老带新</li>
+            <li>媒体/榜单/奖项</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fw-out">
+        <div class="v">4P 是定位的配称：产品承载差异化、渠道决定买方在哪自我教育、价格传递档次、促销负责被看见</div>
+      </div>
+    </div>
+    <div class="fw-arrow">▼</div>
+
+    <!-- 销售支持层 -->
+    <div class="fw-layer">
+      <div class="layer-tag">销售支持</div>
+      <div class="fw-grid">
+        <div class="fw-main">运营和增长驱动</div>
+        <div class="fw-card"><h6>增长黑客</h6><p>AARRR · 数据实验迭代</p></div>
+        <div class="fw-card"><h6>ABM</h6><p>目标客户名单制触达</p></div>
+        <div class="fw-card"><h6>销售支持</h6><p>话术库 · 案例库 · 异议包</p></div>
+      </div>
+      <div class="fw-out">
+        <div class="k">输出：成交的最后 100 米</div>
+        <div class="v">定位定方向、4P 给弹药、增长管转化——市场部把销售从"推销"变成"接球"</div>
+      </div>
+    </div>
+
+    <div class="fw-bottom">
+      <div class="l1">洞察定方向 · 定位定身份 · 配称（4P）定打法 · 增长定成交</div>
+      <div class="l2">品牌战略不是一句口号，是四层结构环环相扣的执行系统。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 12 核心方法论 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">12</div><div class="tag">核心方法论</div></div>
+  <h2 class="slide-title">同质化竞争还是要找到产品差异化</h2>
+  <h3 class="slide-lead">再把它翻译到买方的自我教育路径上——<b>四步方法，每步都有明确交付物</b></h3>
+  <div class="steps">
+    <div class="step-card" data-n="01">
+      <h5>01 品类定义</h5>
+      <div class="q">回答"你是什么"</div>
+      <p>把模糊的行业身份改写为具体品类——细分到客户一说就懂、竞品一时无法跟进。</p>
+      <div class="deliver">交付：品类定位语</div>
+    </div>
+    <div class="step-card" data-n="02">
+      <h5>02 特性占位</h5>
+      <div class="q">回答"有何不同"</div>
+      <p>从客户真实的复购理由中提炼可防守的特性，而非自造形容词。</p>
+      <div class="deliver">交付：差异化特性清单</div>
+    </div>
+    <div class="step-card" data-n="03">
+      <h5>03 信任状</h5>
+      <div class="q">回答"何以见得"</div>
+      <p>把资质、数据、案例从抽屉里拿出来，变成买方可感知、可验证的证据。</p>
+      <div class="deliver">交付：信任状武器化方案</div>
+    </div>
+    <div class="step-card" data-n="04">
+      <h5>04 内容放大</h5>
+      <div class="q">翻译到买方路径上</div>
+      <p>把前三步的结果翻译到搜索、短视频、行业社区——出现在 A3"询问"发生的地方。</p>
+      <div class="deliver">交付：内容矩阵与渠道计划</div>
+    </div>
+  </div>
+  <div class="callout">
+    <b>差异化先行，内容随后，渠道最后。</b>多数代运营直接从第四步开始——在没有差异化的产品上投放同质化内容，预算越大，同质化越深。我们把顺序反过来：先找到"你有而对手没有"的那个事实，再决定怎么讲、在哪讲。
+  </div>
+  <p class="src">方法融合品类与定位理论（品类三问：你是什么 / 有何不同 / 何以见得）与买方旅程模型</p>
+  <div class="two-col">
+    <div class="panel">
+      <h4><span class="dot"></span>品类三问的出处与分工</h4>
+      <ul>
+        <li><b>你是什么</b>——品类定义（Category Definition）：源自定位学派"品类是心智的抽屉"，买方按品类检索记忆</li>
+        <li><b>有何不同</b>——差异化特性（Differentiation）：源自特劳特"与众不同"，必须可防守——竞品短期学不会、长期不愿学</li>
+        <li><b>何以见得</b>——信任状（Trust Marks）：源自"证明"环节，让差异化从"自称"变成"可验证"</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4><span class="dot"></span>顺序为什么不能乱</h4>
+      <ul>
+        <li><b>没有品类的差异化</b>= 无处安放的优点——买方不知道把你归到哪个抽屉</li>
+        <li><b>没有差异化的信任状</b>= 行业公地——竞品同样能出示的资质不构成优势</li>
+        <li><b>没有信任状的内容</b>= 自说自话——A3 阶段的买方要的是证据，不是形容词</li>
+        <li>三步齐备，第四步的投放才有转化率——<b>内容是差异化的翻译，不是差异化的替代</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 12b 伙伴介绍 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">12</div><div class="tag">伙伴介绍 · 合伙人</div></div>
+  <h2 class="slide-title">核心团队</h2>
+  <div class="partner-grid">
+    <div class="partner">
+      <h5>杨烨</h5>
+      <div class="role">合伙人 Founder</div>
+      <ul>
+        <li>商竞咨询 前高级合伙人</li>
+        <li>上海链接者集团 前副总裁</li>
+        <li>为超过 15 家超大型企业、75 家各类中小企业提供品牌战略咨询和数字化营销服务落地</li>
+        <li>思科创投某物联网高科技企业中国区 MD</li>
+        <li>雀巢管培，糖果产品市场经理</li>
+        <li>持有物联网、互联网技术多项国家专利</li>
+      </ul>
+    </div>
+    <div class="partner">
+      <h5>陈默默</h5>
+      <div class="role">合伙人 Co-founder</div>
+      <ul>
+        <li>元璟资本 前投资副总裁；现任某美元基金投资的头部 AI 玩具公司 CMO</li>
+        <li>主导/参与投资：探探、每日优鲜、二更、只二、超级零、鲲游光电等</li>
+        <li>猎云网 2019「年度新生代投资人 TOP30」；曾任 LVMH 管培</li>
+        <li>复旦大学电子工程学士、中欧国际工商学院 MBA</li>
+        <li>消费品牌增长方法论 创始人</li>
+      </ul>
+    </div>
+    <div class="partner">
+      <h5>罗敏</h5>
+      <div class="role">合伙人 Co-founder</div>
+      <ul>
+        <li>商竞咨询 前高级合伙人</li>
+        <li>深圳前海柔宇科技 前 CMO</li>
+        <li>品牌营销从业 20 年，横跨 IT、汽车、医药、金融、快消多行业</li>
+        <li>中国公共关系行业史上首个互联网营销金奖获得者；SABRE Awards 全球金奖（中国公司首个）</li>
+        <li>著有《场景连接一切》（电子工业出版社，2018）；持有大数据与软件系统集成两项专利</li>
+        <li>工信部"品牌万里行"特约讲师，主讲 B2B 战略营销与场景营销</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 13 伙伴介绍 2 ================= -->
+<section class="slide">
+  <div class="sec-no"><div class="num">13</div><div class="tag">伙伴介绍 · 执行团队</div></div>
+  <h2 class="slide-title">运营与技术</h2>
+  <div class="partner-grid two">
+    <div class="partner">
+      <h5>石洪洋</h5>
+      <div class="role">运营主管</div>
+      <ul>
+        <li>熟悉南派、北派代运营公司的风格差异，精通对各层级运营人员的培训和管理</li>
+        <li>擅长管理百人规模运营大项目，并能保持团队较好的内部氛围</li>
+      </ul>
+    </div>
+    <div class="partner">
+      <h5>兰贵东</h5>
+      <div class="role">技术产品经理</div>
+      <ul>
+        <li>密码学专业</li>
+        <li>宝信后端程序员（资深）</li>
+        <li>央国企到民企的全谱系客户技术服务经验</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  B2B 同质化市场营销 · 代运营提案　|　MARKETING OPERATIONS PROPOSAL · 2026 v2.0
+</footer>
+
+</div>
+</body>
+</html>
